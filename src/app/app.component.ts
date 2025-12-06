@@ -14,6 +14,22 @@ export class AppComponent {
   text = "";
 
   onKeyPressed(input: string) {
-    this.text += input;
+    if (input == "C") {
+      this.clearCommand();
+    }
+    else if (input == "=") {
+      this.sumEquation();
+    }
+    else {
+      this.text += input;
+    }
+  }
+
+  clearCommand() {
+    this.text = "";
+  }
+
+  sumEquation() {
+    this.text = "sum";
   }
 }
