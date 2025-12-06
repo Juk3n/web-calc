@@ -21,7 +21,8 @@ export class AppComponent {
       this.sumEquation();
     }
     else {
-      this.text += input;
+      if (input == "X") this.text += "*";
+      else this.text += input;
     }
   }
 
@@ -30,6 +31,6 @@ export class AppComponent {
   }
 
   sumEquation() {
-    this.text = "sum";
+    this.text = new Function(`return ${this.text}`)();
   }
 }
