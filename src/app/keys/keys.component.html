@@ -1,5 +1,5 @@
 <div class="grid-container">
     @for (item of keys; track $index) {
-        <button>{{item}}</button>
+        <button (click)="onKeyPressed(item)">{{item}}</button>
     }
 </div>

@@ -1,4 +1,6 @@
 <app-screen
   text="{{text}}"
 ></app-screen>
-<app-keys></app-keys>
+<app-keys
+  (value)="onKeyPressed($event)"
+></app-keys>
