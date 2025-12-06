@@ -11,4 +11,5 @@ import { KeysComponent } from "./keys/keys.component";
 })
 export class AppComponent {
   title = 'web-calc';
+  text = "sadas";
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-screen',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './screen.component.css'
 })
 export class ScreenComponent {
-  text: string = "";
+  text = input<string>();
 }
