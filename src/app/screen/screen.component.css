@@ -3,5 +3,8 @@
     min-width: 600px;
     align-content: center;
     text-align: center;
-    border: 1px solid red;
+    font-size: x-large;
+    color: rgb(196, 196, 196);
+    border: 6px solid rgb(196, 196, 196);
+    margin-top: 3rem;
 }
