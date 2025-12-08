@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { ScreenComponent } from "./screen/screen.component";
 import { KeysComponent } from "./keys/keys.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ScreenComponent, KeysComponent],
+  imports: [ScreenComponent, KeysComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -31,6 +30,11 @@ export class AppComponent {
   }
 
   sumEquation() {
-    this.text = new Function(`return ${this.text}`)();
+    try {
+      this.text = new Function(`return ${this.text}`)();
+    }
+    catch (error) {
+      this.text = "invalid operation!";
+    }
   }
 }
